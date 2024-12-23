@@ -1,4 +1,75 @@
 <div class="my-3">
     <h2>Of and From operation </h2>
-    <p>of-from works!</p>
+    <br>
+    <strong>Ex - 01 (OF)</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Data :</strong> of('Aanya', 'Arjun', 'Meera', 'Kabir', 'Riya');
+            </p>
+            <hr>
+            <ul>
+                @for (name of nameList; track name) {
+                    <li>{{name}}</li>
+                }                
+            </ul>
+        </div>
+        <div class="col-md-6">
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Data :</strong> of( &#123; a:'Aanya', b:'Arjun', c:'Meera', d:'Kabir', e:'Riya' &#125; )
+            </p>
+            <hr>
+            <ul>
+                <li>a : {{nameMsg.a}}</li>
+                <li>b : {{nameMsg.b}}</li>
+                <li>c : {{nameMsg.c}}</li>
+                <li>d : {{nameMsg.d}}</li>
+                <li>e : {{nameMsg.e}}</li>
+            </ul>
+        </div>
+    </div>
+    <h2 class="mt-5">Of and From operation </h2>
+    <br>
+    <strong>Ex - 02 (From)</strong>
+    <hr>
+    <div class="row">
+        <div class="col-md-4">
+            <strong>Array</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Data :</strong> from(['Aanya', 'Arjun', 'Meera', 'Kabir', 'Riya']);
+            </p>
+            <hr>
+            <ul>
+                @for (name of nameListFrom; track name) {
+                    <li>{{name}}</li>
+                }                
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>Promise</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Data :</strong> from( promise )
+            </p>
+            <hr>
+            <ul>
+                <li>{{promiseRes}}</li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <strong>String to Observable</strong>
+            <hr>
+            <p class="bg-light py-2 px-3 border rounded">
+                <strong>Data :</strong> from('This is the string and I am using it')
+            </p>
+            <hr>
+            <ul>
+                @for(str of stringres; track str ){
+                    <li>{{str}}</li>
+                }                
+            </ul>
+        </div>
+    </div>
 </div>
