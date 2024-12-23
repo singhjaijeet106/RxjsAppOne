@@ -1,0 +1,24 @@
+<div class="my-3">
+    <h2>From Event</h2>
+    <div class="row my-5">
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-header">Add Video</h5>
+                <p class="card-text"></p>
+                <button #addVideoBtn class="btn btn-primary">Add</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+                <h5 class="card-header">Video List</h5>
+                <ul class="my-3">
+                    @for (video of videoList; track video) {
+                    <li>{{ video }}</li>
+                    } @empty {
+                    <li>There are no items.</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
