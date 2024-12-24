@@ -7,15 +7,21 @@ import { ListComponent } from './component/obervable/list/list.component';
 import { IntervalComponent } from './component/obervable/interval/interval.component';
 import { OfFromComponent } from './component/obervable/of-from/of-from.component';
 import { ToarrayComponent } from './component/obervable/toarray/toarray.component';
+import { CustomComponent } from './component/obervable/custom/custom.component';
 
 export const routes: Routes = [
   { path: 'promise', component: PromiseComponent },
-  { path: 'observable', component: ObervableComponent, children:[
-    {path:'',component: ListComponent},
-    {path:'fromevent',component: FromComponent},
-    {path:'interval',component: IntervalComponent},
-    {path:'of-from',component: OfFromComponent},
-    {path:'toarray',component: ToarrayComponent}
-  ]},
+  {
+    path: 'observable',
+    component: ObervableComponent,
+    children: [
+      { path: '', component: ListComponent },
+      { path: 'fromevent', component: FromComponent },
+      { path: 'interval', component: IntervalComponent },
+      { path: 'of-from', component: OfFromComponent },
+      { path: 'toarray', component: ToarrayComponent },
+      { path: 'custom', component: CustomComponent },
+    ],
+  },
   { path: '**', redirectTo: 'observable' },
 ];
